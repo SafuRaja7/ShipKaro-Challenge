@@ -22,8 +22,13 @@ export function SearchBar({ value, onChange }: SearchBarProps) {
         type="search"
         value={value}
         onChange={(event) => onChange(event.target.value)}
+        onKeyDown={(event) => {
+          if (event.key === 'Enter') event.currentTarget.blur()
+        }}
         placeholder="Search by name or description..."
         autoComplete="off"
+        inputMode="search"
+        enterKeyHint="done"
       />
       {value && (
         <button

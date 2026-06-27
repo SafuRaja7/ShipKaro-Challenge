@@ -1269,7 +1269,8 @@ a {
   }
 
   .controls-panel {
-    top: 0;
+    position: relative;
+    top: auto;
   }
 
   .controls-primary {
@@ -1282,6 +1283,10 @@ a {
 
   .search-wrap kbd {
     display: none;
+  }
+
+  .search-wrap input {
+    font-size: 1rem;
   }
 
   .product-grid {
